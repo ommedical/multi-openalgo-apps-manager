@@ -55,14 +55,15 @@ uv run manage_apps.py <command> [options]
 
 ### Commands
 
-| Command                | Description                                                                                     |
-|------------------------|-------------------------------------------------------------------------------------------------|
-| `start <app\|all>`     | Start one app or all apps. If an app is already running, it prints a message and does nothing.  |
-| `stop <app\|all>`      | Stop one app or all apps gracefully (force‑kill after 5 seconds).                               |
-| `restart <app\|all>`   | Stop and then start the specified app(s).                                                       |
-| `status`               | Show the running status and PID (if any) for all discovered apps.                               |
-| `list`                 | List all discovered apps and their full paths.                                                  |
-| `logs <app\|all>`      | Tail the log file of a specific app or all apps. Press `Ctrl+C` to exit.                        |
+| Command                 | Description                                                                                     |
+|-------------------------|-------------------------------------------------------------------------------------------------|
+| `start <app\|all>`      | Start one app or all apps. If an app is already running, it prints a message and does nothing.  |
+| `stop <app\|all>`       | Stop one app or all apps gracefully (force‑kill after 5 seconds).                               |
+| `restart <app\|all>`    | Stop and then start the specified app(s).                                                       |
+| `status`                | Show the running status and PID (if any) for all discovered apps.                               |
+| `list`                  | List all discovered apps and their full paths.                                                  |
+| `logs <app\|all>`       | Tail the log file of a specific app or all apps. Press `Ctrl+C` to exit.                        |
+| `git-pull <app\|all>`   | Update the code of the specified app(s).                                                        |
 
 ### Options
 
