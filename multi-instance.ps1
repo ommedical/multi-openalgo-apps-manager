@@ -26,6 +26,8 @@ for ($i = 1; $i -le $instances; $i++) {
     $dbPath = "sqlite:///db/openalgo$i.db"
     $latencyDB = "sqlite:///db/latency$i.db"
     $logsDB = "sqlite:///db/logs$i.db"
+    $sandboxDB = "sqlite:///db/sandbox$i.db"
+    $historifyDB = "sqlite:///db/historify$i.duckdb"
     $content = Get-Content $envFile
     $content = $content -replace "127.0.0.1:5000", "127.0.0.1:$flaskPort"
     $content = $content -replace "FLASK_PORT='[0-9]+'", "FLASK_PORT='$flaskPort'"
@@ -37,6 +39,8 @@ for ($i = 1; $i -le $instances; $i++) {
     $content = $content -replace "DATABASE_URL = '.*'", "DATABASE_URL = '$dbPath'"
     $content = $content -replace "LATENCY_DATABASE_URL = '.*'", "LATENCY_DATABASE_URL = '$latencyDB'"
     $content = $content -replace "LOGS_DATABASE_URL = '.*'", "LOGS_DATABASE_URL = '$logsDB'"
+    $content = $content -replace "SANDBOX_DATABASE_URL = '.*'", "SANDBOX_DATABASE_URL = '$sandboxDB'"
+    $content = $content -replace "HISTORIFY_DATABASE_URL = '.*'", "HISTORIFY_DATABASE_URL = '$historifyDB'"
     $content = $content -replace "(?<=APP_KEY = ')[^']+", $appKey
     $content = $content -replace "(?<=API_KEY_PEPPER = ')[^']+", $pepper
     Set-Content $envFile $content
