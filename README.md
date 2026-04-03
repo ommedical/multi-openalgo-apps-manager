@@ -63,7 +63,7 @@ uv run manage_apps.py <command> [options]
 | `status`                | Show the running status and PID (if any) for all discovered apps.                               |
 | `list`                  | List all discovered apps and their full paths.                                                  |
 | `logs <app\|all>`       | Tail the log file of a specific app or all apps. Press `Ctrl+C` to exit.                        |
-| `git-pull <app\|all>`   | Update the code of the specified app(s).                                                        |
+| `git-pull <app\|all>`   | Update the code of the specified app(s). (Only works for manage_apps_advance.py file code)      |
 
 ### Options
 
