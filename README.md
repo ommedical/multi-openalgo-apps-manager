@@ -158,6 +158,7 @@ If you want to the code of any or all apps from the github:
 # Skip strategy (default) - safe, no changes if conflicts
 python manage_apps_advance.py git-pull openalgo2
 python manage_apps_advance.py git-pull openalgo2 --strategy skip
+python manage_apps_advance.py git-pull all --strategy skip
 
 # Backup strategy - backup conflicts, then update
 python manage_apps_advance.py git-pull openalgo2 --strategy backup
