@@ -150,6 +150,24 @@ uv run manage_apps.py start all > nul 2>&1
 uv run manage_apps.py start all > /dev/null 2>&1
 ```
 
+### 6. Advance commands to update the codes of each app using manage_apps_advance.py file.
+
+If you want to the code of any or all apps from the github:
+
+```bash
+# Skip strategy (default) - safe, no changes if conflicts
+python manage_apps_advance.py git-pull openalgo2
+python manage_apps_advance.py git-pull openalgo2 --strategy skip
+
+# Backup strategy - backup conflicts, then update
+python manage_apps_advance.py git-pull openalgo2 --strategy backup
+python manage_apps_advance.py -v git-pull all --strategy backup
+
+# Overwrite strategy - force overwrite local changes
+python manage_apps_advance.py git-pull openalgo2 --strategy overwrite
+python manage_apps_advance.py -v git-pull all --strategy overwrite
+```
+
 *Note:* The apps’ logs are still written to their respective log files; only the manager’s console output is suppressed.
 
 ---
