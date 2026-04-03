@@ -10,6 +10,7 @@ A cross‑platform process manager that starts, stops, and monitors multiple Ope
 - **Status** – quickly see which apps are running and their PIDs
 - **List** – show all discovered apps and their paths
 - **Logs** – tail the log file of a single app or all apps simultaneously
+- **git-pull** – updates code of a single app or all apps
 - **Cross‑platform** – works on Windows (using `tasklist` and `CTRL_BREAK_EVENT`) and Unix‑like systems (using process groups and `SIGTERM`)
 - **Clean state** – PID files are automatically cleaned when a process is no longer running
 - **Configurable base directory** – look for app folders in any location via `--base`
