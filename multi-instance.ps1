@@ -26,8 +26,8 @@ for ($i = 1; $i -le $instances; $i++) {
     $dbPath = "sqlite:///db/openalgo$i.db"
     $latencyDB = "sqlite:///db/latency$i.db"
     $logsDB = "sqlite:///db/logs$i.db"
-    $sandboxDB = "sqlite:///db/sandbox.db"
-    $historifyDB = "sqlite:///db/historify.duckdb"
+    $sandboxDB = "sqlite:///db/sandbox$i.db"
+    $historifyDB = "sqlite:///db/historify$i.duckdb"
     $content = Get-Content $envFile
     $content = $content -replace "127.0.0.1:5000", "127.0.0.1:$flaskPort"
     $content = $content -replace "FLASK_PORT='[0-9]+'", "FLASK_PORT='$flaskPort'"
